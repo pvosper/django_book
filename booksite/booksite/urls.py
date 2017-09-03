@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from booksite.views import hello, current_datetime, hours_ahead, meta_detail
-
+from books import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^time/$', current_datetime),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),  # capture data using ()
     url(r'^meta/$', meta_detail, name='meta_detail'),
+    url(r'^search-form/$', views.search_form),
+    url(r'^search/$', views.search),
 ]
