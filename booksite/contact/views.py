@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
-from booksite.contact.forms import ContactForm
+from contact.forms import ContactForm
 
 
 def contact(request):
