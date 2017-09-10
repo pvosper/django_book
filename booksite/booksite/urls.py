@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from booksite.views import hello, current_datetime, hours_ahead, meta_detail
 from books import views
+from contact import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     url(r'^meta/$', meta_detail, name='meta_detail'),
     url(r'^search-form/$', views.search_form),
     url(r'^search/$', views.search),
+    url(r'^contact/$', contact.views.contact)
 ]
